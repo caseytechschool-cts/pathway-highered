@@ -8,7 +8,7 @@ Clone this repository to get started. Use the following command to clone the rep
 ```
 git clone https://github.com/caseytechschool-cts/pathway-highered.git
 ```
-Alternatively, visit [https://github.com/caseytechschool-cts/pathway-highered.git](https://github.com/caseytechschool-cts/pathway-highered.git), click on the green **Code** button, and select **Download ZIP**. After downloading, unzip the folder to your desired location, such as your desktop.
+Alternatively, click on the green **Code** button, and select **Download ZIP**. After downloading, unzip the folder to your desired location, such as your desktop.
 
 ---
 
@@ -33,7 +33,7 @@ This package allows you to create a virtual environment with a specific Python v
 
 ### Step 1: Create a Virtual Environment  
 1. Open your code editor (e.g., VS Code).  
-2. From the `File` menu choose `Open Folder` and navigate to the unzip folder from the getting started section.  
+2. From the `File` menu, select `Open Folder`, and navigate to the folder from the Getting Started section.  
 3. Open a terminal (`Terminal -> New Terminal`) in your editor and run:  
    ```
    virtualenv -p "C:\Path\to\python.exe" myenv
@@ -47,14 +47,11 @@ This package allows you to create a virtual environment with a specific Python v
      Copy the path containing `python38` and replace the placeholder path above.  
 
 ### Step 2: Activate the Virtual Environment  
-- On Windows:  Type the following in the terminal
+- Type the following in the terminal. Replace `myenv` with your virtual environment name.
   ```
   myenv\Scripts\activate
   ```  
-- On macOS/Linux:  
-  ```
-  source myenv/bin/activate
-  ```  
+-
 
 ### Step 3: Install Dependencies  
 Install all required packages by running:  
