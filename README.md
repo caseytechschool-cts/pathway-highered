@@ -14,14 +14,13 @@ This repository contains the necessary code and tools for students and teachers 
 ## Prerequisites
 
 ### Required Hardware
-- Dobot Magician robotic arm
-- USB-A to USB-B cable
-- Power adapter for Dobot Magician
+- Dobot Magician robotic arm kit
+- Conveyor belt
 
 ### Required Software
 - Python 3.8 (Required for package compatibility)
-- Git (for version control)
-- Visual Studio Code (recommended) or any preferred code editor
+- Git (optional)
+- Visual Studio Code (recommended) or Windsurf by Codeium (optional)
 
 ## Installation
 
@@ -31,9 +30,10 @@ Clone this repository using Git:
 git clone https://github.com/caseytechschool-cts/pathway-highered.git
 ```
 Or download as ZIP:
-1. Click the green **Code** button above
-2. Select **Download ZIP**
-3. Extract to your preferred location
+1. Visit the repository: https://github.com/caseytechschool-cts/pathway-highered
+2. Click the green **Code** button above
+3. Select **Download ZIP**
+4. Extract to your preferred location
 
 ### Python Setup
 1. Download Python 3.8 from the [official Python website](https://www.python.org/downloads/release/python-380/)
@@ -129,6 +129,4 @@ dobot_get_position.exe
 ## Version Information
 - Last Updated: December 2024
 - Python Version: 3.8
-- Tested on Windows 10/11
-
-For more detailed information or specific use cases, please refer to the documentation in the `docs` folder.
+- Tested on Windows 11
