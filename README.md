@@ -1,86 +1,134 @@
+# Pathway Program Repository for Chisholm HigherEd
 
+## Overview
+This repository contains the necessary code and tools for students and teachers participating in the Pathway program, focusing on Dobot Magician robotics integration. The guide provides comprehensive setup instructions and troubleshooting steps.
 
-# Pathway Program Repository for Chisholm HigherEd  
-This repository provides the code and tools necessary for students and teachers participating in the pathway program. It includes step-by-step instructions to set up your computer and ensure all code runs smoothly.  
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Setup Instructions](#setup-instructions)
+- [Testing](#testing)
+- [Troubleshooting](#troubleshooting)
+- [Additional Resources](#additional-resources)
 
-## Getting Started  
-Clone this repository to get started. Use the following command to clone the repository:  
-```
+## Prerequisites
+
+### Required Hardware
+- Dobot Magician robotic arm
+- USB-A to USB-B cable
+- Power adapter for Dobot Magician
+
+### Required Software
+- Python 3.8 (Required for package compatibility)
+- Git (for version control)
+- Visual Studio Code (recommended) or any preferred code editor
+
+## Installation
+
+### Getting the Code
+Clone this repository using Git:
+```bash
 git clone https://github.com/caseytechschool-cts/pathway-highered.git
 ```
-Alternatively, click on the green **Code** button, and select **Download ZIP**. After downloading, unzip the folder to your desired location, such as your desktop.
+Or download as ZIP:
+1. Click the green **Code** button above
+2. Select **Download ZIP**
+3. Extract to your preferred location
 
----
+### Python Setup
+1. Download Python 3.8 from the [official Python website](https://www.python.org/downloads/release/python-380/)
+2. During installation:
+   - Check "Add Python 3.8 to PATH"
+   - Check "Install pip"
+   - Check "Create shortcuts for installed applications"
 
-## Prerequisites  
-
-### 1. Download and Install Python 3.8  
-- Download Python 3.8 from the [official Python website](https://www.python.org/downloads/).  
-- During installation, **check the box "Add Python 3.8 to PATH"**.  
-- Note: Some packages used in this program require Python 3.7 or 3.8, which is why this version is specified.  
-- If you already have a different version of Python, you can still install Python 3.8 alongside it.  
-
-### 2. Install Virtualenv  
-Install `virtualenv` by running the following command in your terminal:  
-```
+### Virtual Environment Setup
+1. Install virtualenv:
+```bash
 pip install virtualenv
-```  
-This package allows you to create a virtual environment with a specific Python version.
-
----
-
-## Setup Instructions  
-
-### Step 1: Create a Virtual Environment  
-1. Open your code editor (e.g., VS Code).  
-2. From the `File` menu, select `Open Folder`, and navigate to the folder from the Getting Started section.  
-3. Open a terminal (`Terminal -> New Terminal`) in your editor and run:  
-   ```
-   virtualenv -p "C:\Path\to\python.exe" myenv
-   ```  
-   - Replace `C:\Path\to\python.exe` with the path to your Python 3.8 executable.  
-   - Replace `myenv` with your desired virtual environment name.  
-   - To find the Python 3.8 path, type the following in your terminal:  
-     ```
-     where python
-     ```  
-     Copy the path containing `python38` and replace the placeholder path above.  
-
-### Step 2: Activate the Virtual Environment  
-- Type the following in the terminal. Replace `myenv` with your virtual environment name.
-  ```
-  myenv\Scripts\activate
-  ```  
-
-### Step 3: Install Dependencies  
-Install all required packages by running:  
 ```
+
+2. Create a virtual environment:
+```bash
+# Windows
+virtualenv -p "C:\Users\{Username}\AppData\Local\Programs\Python\Python38\python.exe" venv
+
+# Replace {Username} with your Windows username
+```
+
+3. Activate the environment:
+```bash
+# Windows
+venv\Scripts\activate
+```
+
+4. Install dependencies:
+```bash
 pip install -r requirements.txt
-```  
-
-### Step 4: Install the Dobot Driver  
-To communicate with the Dobot Magician, download and install the USB-to-UART bridge driver:  
-[Silicon Labs Driver Download](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)  
-- Download the universal Windows driver and follow the installation steps.  
-
----
-
-## Testing the Setup  
-
-### 1. Connect the Dobot Magician  
-- Connect your Dobot Magician to your computer and power it on.  
-
-### 2. Test with Basic Code  
-Run the `basic.py` script to verify the arm's functionality. The arm should move if everything is set up correctly.  
-
-### 3. Utility Tool  
-To check the arm's position, use the utility tool:  
 ```
+
+## Dobot Setup
+
+### Driver Installation
+1. Download the [Silicon Labs CP210x USB-to-UART Bridge Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+2. Install the appropriate version for your OS
+3. Restart your computer after installation
+
+### Hardware Connection
+1. Connect the Dobot Magician to power
+2. Connect the USB cable to your computer
+3. Wait for Windows to recognize the device (~30 seconds)
+4. Verify connection in Device Manager under "Ports (COM & LPT)"
+
+## Testing
+
+### Basic Functionality Test
+1. Ensure the virtual environment is activated
+2. Run the basic test script:
+```bash
+python basic.py
+```
+Expected behavior: The Dobot arm should perform a simple movement sequence
+
+### Position Utility
+Check the arm's current position:
+```bash
 dobot_get_position.exe
-```  
-> Note: Only one program can connect to the Dobot at a time. Ensure other applications are closed when using this tool.
+```
+> Important: Only one program can connect to the Dobot at a time
+
+## Troubleshooting
+
+### Common Issues
+1. **COM Port Not Found**
+   - Check USB connection
+   - Verify driver installation in Device Manager
+   - Try a different USB port
+
+2. **Python Import Errors**
+   - Confirm virtual environment is activated
+   - Reinstall requirements: `pip install -r requirements.txt`
+
+3. **Dobot Connection Error**
+   - Close all other programs using the Dobot
+   - Reset the Dobot power
+   - Check if correct COM port is selected
+
+### Getting Help
+- Create an issue on GitHub
+- Contact technical support: support@chisholm.edu.au
+- Check the [Dobot Documentation](https://www.dobot.cc/downloadcenter.html)
+
+## Additional Resources
+- [Dobot Magician User Manual](https://www.dobot.cc/downloadcenter/dobot-magician.html)
+- [Python Documentation](https://docs.python.org/3.8/)
+- [Video Tutorials](https://www.youtube.com/c/DobotRobot)
 
 ---
 
-You are now ready to explore and tinker with the Dobot Magician. Happy coding!  
+## Version Information
+- Last Updated: December 2024
+- Python Version: 3.8
+- Tested on Windows 10/11
 
+For more detailed information or specific use cases, please refer to the documentation in the `docs` folder.
