@@ -16,7 +16,7 @@ class MyDobot(Dobot):
         msg.id = 138
         msg.ctrl = 0x03
         msg.params = bytearray([])
-        msg.param.extend(bytearray([int(enable)]))
+        msg.params.extend(bytearray([int(enable)]))
         msg.params.extend(bytearray([port]))
         msg.params.extend(bytearray([version]))
         return self._extract_cmd_index(self._send_command(msg))
