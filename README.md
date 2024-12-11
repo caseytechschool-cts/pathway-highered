@@ -39,8 +39,6 @@ Or download as ZIP:
 1. Download Python 3.8 from the [official Python website](https://www.python.org/downloads/release/python-380/)
 2. During installation:
    - Check "Add Python 3.8 to PATH"
-   - Check "Install pip"
-   - Check "Create shortcuts for installed applications"
 
 ### Virtual Environment Setup
 1. Install virtualenv:
@@ -53,7 +51,7 @@ pip install virtualenv
 # Windows
 virtualenv -p "C:\Users\{Username}\AppData\Local\Programs\Python\Python38\python.exe" venv
 
-# Replace {Username} with your Windows username
+# Replace {Username} with your Windows username if you have installed at the default location
 ```
 
 3. Activate the environment:
