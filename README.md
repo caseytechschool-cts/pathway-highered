@@ -52,9 +52,9 @@ pip install virtualenv
 ```bash
 # Windows
 virtualenv -p "C:\Users\{Username}\AppData\Local\Programs\Python\Python38\python.exe" venv
-
-Replace {Username} with your Windows username if you have installed at the default location
 ```
+Replace {Username} with your Windows username if you have installed at the default location
+
 3. If you do not know where is your Python 3.8 installation, run the following command on the command line 
 ```bash
 where python
