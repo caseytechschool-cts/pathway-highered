@@ -26,7 +26,7 @@ def main():
     try:
         available_ports = list_ports.comports()
         if not available_ports:
-            print("Error: No ports available. Please check your device connection.")
+            print(f'Error: No ports available. Please check your device connection.')
             sys.exit(1)
             
         print(f'available ports: {[x.device for x in available_ports]}')
@@ -35,7 +35,7 @@ def main():
         device.move_to(x=100, y=50, z=50)
         device.close()
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f'An error occurred: {e}')
 
 if __name__ == "__main__":
     main()
