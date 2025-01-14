@@ -22,7 +22,7 @@ def initialize_device():
     """Initialize and return the Dobot device connection."""
     available_ports = list_ports.comports()
     if not available_ports:
-        print("Error: No ports available. Please check your device connection.")
+        print(f'Error: No ports available. Please check your device connection.')
         sys.exit(1)
         
     print(f'available ports: {[x.device for x in available_ports]}')
@@ -95,7 +95,7 @@ def main():
     try:
         device = initialize_device()
         
-        # Process three objects
+        # Process three objects of three different colors
         for i in range(3):
             # Run conveyor belt longer for the first object
             duration = 5 if i == 0 else 1

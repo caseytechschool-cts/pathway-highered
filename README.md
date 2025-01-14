@@ -16,11 +16,12 @@ This repository contains the necessary code and tools for students and teachers 
 ### Required Hardware
 - Dobot Magician robotic arm kit
 - Conveyor belt
+- Different sensors (e.g., distance and colour sensor)
 
 ### Required Software
 - Python 3.8 (Required for package compatibility)
 - Git (optional)
-- Visual Studio Code (recommended) or Windsurf by Codeium (optional)
+- [Visual Studio Code](https://code.visualstudio.com/) (recommended) or [Windsurf by Codeium](https://codeium.com/windsurf) (optional)
 
 ## Installation
 
@@ -38,8 +39,9 @@ Or download as ZIP:
 ### Python Setup
 1. Download Python 3.8 from the [official Python website](https://www.python.org/downloads/release/python-380/)
 2. During installation:
-   - Check "Add Python 3.8 to PATH"
+   - Check **"Add Python 3.8 to PATH"**
 
+Open the cloned or the downloaded folder in your prefered IDE to complete the installation process.
 ### Virtual Environment Setup
 1. Install virtualenv:
 ```bash
@@ -51,7 +53,11 @@ pip install virtualenv
 # Windows
 virtualenv -p "C:\Users\{Username}\AppData\Local\Programs\Python\Python38\python.exe" venv
 
-# Replace {Username} with your Windows username if you have installed at the default location
+Replace {Username} with your Windows username if you have installed at the default location
+```
+3. If you do not know where is your Python 3.8 installation, run the following command on the command line 
+```bash
+where python
 ```
 
 3. Activate the environment:
@@ -68,7 +74,7 @@ pip install -r requirements.txt
 ## Dobot Setup
 
 ### Driver Installation
-1. Download the [Silicon Labs CP210x USB-to-UART Bridge Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+1. Download and install the [Silicon Labs CP210x USB-to-UART Bridge Driver](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 2. Install the appropriate version for your OS
 3. Restart your computer after installation
 
